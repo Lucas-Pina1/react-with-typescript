@@ -1,8 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  useEffect(() => {
+    window.confirm('você é homem?')
+      ? console.log('Homem')
+      : console.log('Mulher')
+  }, [])
+
+  useEffect(() => {
+    console.log(email)
+  }, [email])
+
+  useEffect(() => {
+    console.log(password)
+  }, [password])
 
   function handleEntrar() {
     console.log(email)
